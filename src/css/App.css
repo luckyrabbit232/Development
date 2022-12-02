@@ -1,0 +1,164 @@
+.App {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  background-color: peachpuff;
+}
+
+.Logo{
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  align-items: center;
+}
+
+.Logo_Image{
+  width: 80px;
+  height: auto;
+  padding-right:10px;
+  background-color: peachpuff;
+}
+
+.Content{
+  flex: 1;
+ display:flex;
+ flex-direction: row;
+}
+
+.filter_Section{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+}
+
+.sortContainer{
+  padding-left: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.typesContainer{
+  padding-left: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.mealContainer{
+  padding-left: 10px; 
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.item_Section{
+  flex: 5;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.form{
+  display:flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.child_Item{
+  flex: 1;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; 
+}
+
+.RecipeItem{
+  flex: 1;
+  background-color:rgb(137, 156, 148);
+  height: 550px;
+  display: flex;
+  padding: 20px;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content:baseline; 
+}
+
+.name{
+  align-items: center;
+}
+
+.picture{
+  height: 150px;
+  width: 150px;
+}
+
+.description{
+  align-items: center;
+}
+
+.price{
+  align-items:start;
+
+}
+
+.cookingTime{
+  text-align: start;
+
+}
+
+.preperationTime{
+  text-align: center;
+
+}
+
+.Type{
+  text-align: center;
+
+}
+
+.Mealtime{
+  text-align: center;
+
+}
+
+.button{
+  background-color: aliceblue;
+  border: 1px solid rgb(173, 210, 243);
+  border-radius: 5px;
+  width: 90px;
+  height: 20px;
+  cursor: pointer;
+  transition: ease-in-out 0.1s;
+}
+
+.cartSection{
+  flex: 1;
+  background-color: peachpuff;
+  display:flex;
+  flex-direction: column;
+}
+.cart_Price{
+  padding-left: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.cart_preperationTime{
+  flex-direction: column;
+  display: flex;
+  align-items: flex-start;
+}
+
+.cart_cookingTime{
+  flex-direction: column;
+  display: flex;
+  align-items: flex-start;
+}
+
+.cart_Items{
+  flex-direction: column;
+  align-items: flex-start;}

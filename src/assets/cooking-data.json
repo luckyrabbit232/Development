@@ -1,0 +1,134 @@
+[
+    {
+        "name": "Chicken Stew",
+        "description": "A delicious aromatic stew made of carrots, potatoes, and chicken. Infused with herbs and other condiments for a Mediterranean feel.",
+        "price": 30.00,
+        "Cooking_time": 90,
+        "Preperation_time": 45,
+        "Type": "Stew",
+        "Mealtime": "Lunch",
+        "image": "images/ChickenStew.jpg"
+    },
+
+    {
+        "name": "Tiramisu",
+        "description": "A well known dessert made of coffee, egg, sugar, and milk. Delightful for the dessert lover.",
+        "price": 20.00,
+        "Cooking_time": 45,
+        "Preperation_time": 45,
+        "Type": "Dessert",
+        "Mealtime": "Dinner",
+        "image": "images/tiramisu.jpg"
+    },
+
+    {
+        "name": "Chicken Satay",
+        "description": "Southeastern Asian dish made of marinated spices full of herbs. Comes with peanut sauce.",
+        "price": 20.50,
+        "Cooking_time": 30,
+        "Preperation_time": 360,
+        "Type": "Poultry",
+        "Mealtime": "Lunch",
+        "image": "images/ChickenSatay.jpg"
+    },
+
+    {
+        "name": "Caeser Salad",
+        "description": "Classic Mediterranean dish full of delicious sauces and fresh vegetables",
+        "price": 20.00,
+        "Cooking_time": 5,
+        "Preperation_time": 20,
+        "Type": "Vegetables",
+        "Mealtime": "Lunch",
+        "image": "images/CaesarSalad.jpg"
+    },
+
+    {
+        "name": "Home-made Lamb Sausage Links",
+        "description": "Classic Italian food made of wrapped meat mixed with spices",
+        "price": 10.00,
+        "Cooking_time": 10,
+        "Preperation_time": 580,
+        "Type": "Poultry",
+        "Mealtime": "Breakfast",
+        "image": "images/LambSausage.jpg"
+    },
+
+    {
+        "name": "Beef Stew",
+        "description": "A delicious aromatic stew made of carrots, potatoes, and beef. Infused with herbs and other condiments for a Mediterranean feel.",
+        "price": 50.00,
+        "Cooking_time": 180,
+        "Preperation_time": 60,
+        "Type": "Beef",
+        "Mealtime": "Dinner",
+        "image": "images/BeefStew.jpg"
+    },
+
+    {
+        "name": "Egg Tart",
+        "description": "A Hong Kong dish created during colonial times. Made of egg, milk, and flour.",
+        "price": 15.00,
+        "Cooking_time": 90,
+        "Preperation_time": 30,
+        "Type": "Dessert",
+        "Mealtime": "Dinner",
+        "image": "images/EggTart.jpg"
+    },
+
+    {
+        "name": "Fried Rice",
+        "description": "Basic and easy Chinese meal. A combination of many ingredients into a delicious and filling meal.",
+        "price": 10.00,
+        "Cooking_time": 20.00,
+        "Preperation_time": 20.00,
+        "Type": "Vegetables",
+        "Mealtime": "Lunch",
+        "image": "images/FriedRice.jpg"
+    },
+
+    {
+        "name": "Roasted Duck",
+        "description": "Succulent Chinese duck that comes with a sweet plum sauce. Takes a long time to prepeare.",
+        "price": 100.00,
+        "Cooking_time": 280,
+        "Preperation_time": 360,
+        "Type": "Poultry",
+        "Mealtime": "Dinner",
+        "image": "images/RoastDuck.jpg"
+    },
+
+    {
+        "name": "Baked Salmon",
+        "description": "Simple Mediterranean dish. Comes with lots of nutrients and a salty fishy taste.",
+        "price": 30.00,
+        "Cooking_time": 60.00,
+        "Preperation_time": 60.00,
+        "Type": "Fish",
+        "Mealtime": "Dinner",
+        "image": "images/BakedSalmon.jpeg"
+    },
+
+    {
+        "name": "Ice Cream",
+        "description": "Most widley known dessert. Sweet and savory. Comes in any flavors.",
+        "price": 10.00,
+        "Cooking_time": 0.00,
+        "Preperation_time": 60.00,
+        "Type": "Dessert",
+        "Mealtime": "Breakfast",
+        "image": "images/IceCream.jpg"
+    },
+
+    {
+        "name": "Black Forest Cake",
+        "description": "A traditional German cake made of chocolate, cherries, and wine. Sweet and alcoholic.",
+        "price": 50.00,
+        "Cooking_time": 60.00,
+        "Preperation_time": 60.00,
+        "Type": "Desserts",
+        "Mealtime": "Dinner",
+        "image": "images/BlackForestCake.jpg"
+    }
+
+]
