@@ -14,8 +14,8 @@ function App() {
   const [newCart, setcart] = useState(Array(data.length).fill(0));
   const [displayRecipe, setDisplayRecipe] = useState(data);
 
-  const [type, setType] = useState('All');
-  const [meal, mealType] = useState('All');
+  const [Type, setType] = useState('All');
+  const [Meal, mealType] = useState('All');
   const [sort, sortType] = useState(null);
 
   const addCart = (item) =>{
@@ -40,9 +40,9 @@ function App() {
     console.log(sortingMethod);
     console.log(displayRecipe);
     sortType(sortingMethod);
-    if (sort == "price"){
+    if (sortingMethod == "price"){
       displayRecipe.sort(function(a,b){return a.price-b.price});
-    } else if (sort == "Cooking_Time"){
+    } else if (sortingMethod == "Cooking_Time"){
       displayRecipe.sort(function(a,b){return a.Cooking_time - b.Cooking_time});
     } else{
       displayRecipe.sort(function(a,b){return a.Preperation_time - b.Preperation_time});
@@ -50,22 +50,33 @@ function App() {
   }
 
   // use this function to add and remove types from each item on form press
-  const selectFilterType = eventKey =>{
-     setType =  (eventKey); 
+  const selectFilterType = (hierarchy) =>{
+    setType(hierarchy.target.value); 
   }
 
-  const filterMealClick  = type => {
-      const filteredRecipes = data.filter(item => item.Mealtime == type);
-      setDisplayRecipe(filteredRecipes);
+  const selectMealType = (hierarchy) =>{
+    mealType(hierarchy.target.value); 
+  }
+
+  const matchesFilterType  = (item) => {
+    if (Type == "All"){
+      return true;
+    } else if (Type == item.Type) {
+      return item.Type;
+    } else {
+      return false; 
     }
-
-  
-
-  const filterTypeClick = type => {
-    const filteredRecipes = data.filter(item => item.Type = type); 
-    setDisplayRecipe(filteredRecipes);
   }
 
+  const matchesMealType = (item) => {
+    if (Meal == "All"){
+      return true;
+    } else if (Meal == item.Mealtime) {
+      return item.Type;
+    } else {
+      return false; 
+    }
+  }
 
   // To do:
   // 1. Add sort function
@@ -119,20 +130,23 @@ function App() {
           <div className = "typesContainer">
             <h2>Types: </h2> 
             <Form>
-              {['checkbox'].map((type) =>(
+              {['radio'].map((type) =>(
                 <div key = {`default-${type}`} className = "form">
                   <Form.Check
                     type = {type}
                     id = {`All`}
                     label = "All"
                     name = "group2"
+                    value = "All"
+                    onChange = {selectFilterType}
                   />
                   <Form.Check
                     type = {type}
                     id = {`Vegetables`}
                     label = "Vegetables"
                     name = "group2"
-                    // onSelect={selectFilterType}
+                    value = "Vegetables"
+                    onChange = {selectFilterType}
                   />
 
                   <Form.Check
@@ -140,6 +154,8 @@ function App() {
                     id = {`Stew`}
                     label = "Stew"
                     name = "group2"
+                    value = "Stew"
+                    onChange = {selectFilterType}
                   />
 
                   <Form.Check
@@ -147,6 +163,8 @@ function App() {
                     id = {`Poultry`}
                     label = "Poultry"
                     name = "group2"
+                    value = "Poultry"
+                    onChange = {selectFilterType}
                   />
 
                   <Form.Check
@@ -154,6 +172,8 @@ function App() {
                     id = {`Poultry`}
                     label = "Fish"
                     name = "group2"
+                    value = "Fish"
+                    onChange = {selectFilterType}
                   />
 
                   <Form.Check
@@ -161,6 +181,8 @@ function App() {
                     id = {`Beef`}
                     label = "Beef"
                     name = "group2"
+                    value = "Beef"
+                    onChange = {selectFilterType}
                   />
 
                   <Form.Check
@@ -168,6 +190,8 @@ function App() {
                     id = {`Desserts`}
                     label = "Desserts"
                     name = "group2"
+                    value = "Desserts"
+                    onChange = {selectFilterType}
                   />
                 </div>
               ))}
@@ -176,13 +200,16 @@ function App() {
           <div className = "mealContainer">
             <h2>Meal: </h2>
             <Form>
-              {['Checkbox'].map((type) =>(
+              {['radio'].map((type) =>(
                 <div key = {`default-${type}`} className = "form">
                   <Form.Check
                     type = {type}
                     id = {`All`}
                     label = "All"
                     name = "group3"
+                    value = "All"
+                    onChange = {selectMealType}
+
                   />
 
                   <Form.Check
@@ -190,6 +217,9 @@ function App() {
                     id = {`breakfast`}
                     label = "Breakfast"
                     name = "group3"
+                    value = "Breakfast"
+                    onChange = {selectMealType}
+
                   />
 
                   <Form.Check
@@ -197,6 +227,10 @@ function App() {
                     id = {`Lunch`}
                     label = "Lunch"
                     name = "group3"
+                    value = "Lunch"
+                    onChange = {selectMealType}
+
+
                   />
 
                   <Form.Check
@@ -204,6 +238,10 @@ function App() {
                     id = {`dinner`}
                     label = "Dinner"
                     name = "group3"
+                    value = "Dinner"
+                    onChange = {selectMealType}
+
+
                   />
                 </div>
               ))}
@@ -218,14 +256,16 @@ function App() {
 
         <div className = "item_Section">
           <div className = "child_Item">
-            {displayRecipe.map((item, index) =>
+            {displayRecipe.map((item, index) =>(
+              matchesFilterType(item) &&
+              matchesMealType(item) &&
               <RecipeItem
                 item = {item}
                 index = {index}
                 addCart = {addCart}
                 removeCart = {removeCart} 
               />
-            )}
+            ))}
           </div>
         </div>
 

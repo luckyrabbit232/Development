@@ -20,7 +20,9 @@ function RecipeItem(cart) {
 
     return(
         <div className= "RecipeItem">
+            <div className = "picture_container">
             <img src = {item.image} className = "picture"></img>
+            </div>
             <div className = "Name">
                 <b>{item.name}</b>
             </div>
