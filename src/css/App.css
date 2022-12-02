@@ -148,6 +148,17 @@
   margin: 0 auto;
 
 }
+.resetbutton{
+  background-color: aliceblue;
+  border: 1px solid rgb(173, 210, 243);
+  border-radius: 5px;
+  width: 120px;
+  height: 20px;
+  cursor: pointer;
+  transition: ease-in-out 0.1s;
+  display: block;
+  margin: 0 auto;
+}
 
 .cartSection{
   flex: 1;

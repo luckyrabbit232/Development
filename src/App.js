@@ -4,7 +4,6 @@ import RecipeItem from './components/RecipeItem'
 import CartItem from './components/CartItems'
 import { useState } from 'react';
 import Form from 'react-bootstrap/Form'
-
 data.forEach((item) => {
   item.image = process.env.PUBLIC_URL + "/" + item.image;
 });
@@ -16,7 +15,19 @@ function App() {
 
   const [Type, setType] = useState('All');
   const [Meal, mealType] = useState('All');
-  const [sort, sortType] = useState(null);
+  const [sort, sortType] = useState("All");
+
+  const resetHandler = () =>{
+    setcart(Array(data.length).fill(0));
+    setDisplayRecipe(data);
+    setType('All');
+    mealType('All');
+    displayRecipe.sort(function(a,b){return a.price-b.price});
+    document.getElementById('AllSort').checked = true;
+    document.getElementById('AllType').checked = true;
+    document.getElementById('AllMeal').checked = true;
+
+  }
 
   const addCart = (item) =>{
     const cart = [...newCart];
@@ -78,9 +89,6 @@ function App() {
     }
   }
 
-  // To do:
-  // 1. Add sort function
-  // 2. Add filter function
   return (
     <div className="App">
       <div className = "Logo">
@@ -96,6 +104,16 @@ function App() {
             <Form>
               {['radio'].map((type) =>(
                 <div key = {`default-${type}`} className = "form">
+                  <Form.Check
+                    type = {type}
+                    id = {`AllSort`}
+                    label = "All"
+                    name = "group1"
+                    value = "All"
+                    onChange={sorting}
+                    defaultChecked
+                  />
+
                   <Form.Check
                     type = {type}
                     id = {`price`}
@@ -134,11 +152,12 @@ function App() {
                 <div key = {`default-${type}`} className = "form">
                   <Form.Check
                     type = {type}
-                    id = {`All`}
+                    id = {`AllType`}
                     label = "All"
                     name = "group2"
                     value = "All"
                     onChange = {selectFilterType}
+                    defaultChecked
                   />
                   <Form.Check
                     type = {type}
@@ -204,11 +223,12 @@ function App() {
                 <div key = {`default-${type}`} className = "form">
                   <Form.Check
                     type = {type}
-                    id = {`All`}
+                    id = {`AllMeal`}
                     label = "All"
                     name = "group3"
                     value = "All"
                     onChange = {selectMealType}
+                    defaultChecked
 
                   />
 
@@ -247,7 +267,7 @@ function App() {
               ))}
             </Form>
           </div>
-
+            <button className = "resetbutton" onClick = {resetHandler}>Reset Selection</button> :
         </div>  
 
 

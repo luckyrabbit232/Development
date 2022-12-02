@@ -71,7 +71,7 @@
         "price": 15.00,
         "Cooking_time": 90,
         "Preperation_time": 30,
-        "Type": "Dessert",
+        "Type": "Desserts",
         "Mealtime": "Dinner",
         "image": "images/EggTart.jpg"
     },
@@ -90,7 +90,7 @@
     {
         "name": "Roasted Duck",
         "description": "Succulent Chinese duck that comes with a sweet plum sauce. Takes a long time to prepeare.",
-        "price": 100.00,
+        "price": 1.00,
         "Cooking_time": 280,
         "Preperation_time": 360,
         "Type": "Poultry",
@@ -115,7 +115,7 @@
         "price": 10.00,
         "Cooking_time": 0.00,
         "Preperation_time": 60.00,
-        "Type": "Dessert",
+        "Type": "Desserts",
         "Mealtime": "Breakfast",
         "image": "images/IceCream.jpg"
     },
